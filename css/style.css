@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    background-color:#354059;
+    display: flex;
+    color: #ffffff;
+    /* width:100vw;
+    height: 100vh; */
+    
+}
+.inner-body{
+    background-color:  #202c48;
+    padding: 1rem;
+    border-radius: 20px;
+    margin: 3rem;
+    height: auto;
+}
+
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+li{
+    list-style-type: none;
+    padding: 1rem;
+}
+li a{
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+.intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-border{
+    width:25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background-color:#354059;
+    display: flex;
+    justify-content: center;
+    margin: 6rem;
+}
+.header-text{
+    margin:6rem;
+    text-align: right;
+    color:#ffffff;
+    line-height: 3rem;
+}
+.about-me{
+  padding: 7rem;
+  text-align: center;
+  color:#ffffff;
+  line-height: 2rem;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+.cards{
+    width: 20rem;
+    padding: 2rem;
+    background-color: #354059;
+    border-radius: 20px;
+    box-shadow: 2px #ffffff;
+    margin: 1rem;
+}
+.projects{
+margin: 10rem;
+}
+.projects img{
+    width: 30%;
+}
