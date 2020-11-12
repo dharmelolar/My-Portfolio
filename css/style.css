@@ -144,11 +144,15 @@ margin: 10rem;
     margin: 1rem;
 }
 /* media querries */
+
+
 @media screen and (max-width:768px){
-    
-    .navbar{
-        display: none;
+    .inner-body{
+        margin: 1rem;
     }
+    /* .navbar{
+        display: none;
+    } */
 .intro{
     display: flex;
     flex-direction: column;
@@ -156,6 +160,8 @@ margin: 10rem;
     }
     .header-text{
         text-align: center;
+        font-size: 10px;
+        margin:0rem;
     }
     .skills{
         display: flex;
@@ -166,6 +172,7 @@ margin: 10rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 1rem;
     }
     .img-border{
         width:20rem;
@@ -174,29 +181,13 @@ margin: 10rem;
         background-color:#354059;
         display: flex;
         justify-content: center;
-        margin: 6rem;
+        margin: 0rem
     }
-}
-@media screen and (max-width:1024px){
-    .navbar{
-        display: none;
-    }
-.intro{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    .header-text{
-        text-align: center;
-    }
-    .skills{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .projects{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .about-me{
+        margin: 0 3rem;
+      padding: 1rem;
+      text-align: center;
+      color:#ffffff;
+      line-height: 2rem;
     }
 }
