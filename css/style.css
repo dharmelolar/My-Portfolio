@@ -150,9 +150,9 @@ margin: 10rem;
     .inner-body{
         margin: 1rem;
     }
-    /* .navbar{
+    .navbar{
         display: none;
-    } */
+    }
 .intro{
     display: flex;
     flex-direction: column;
