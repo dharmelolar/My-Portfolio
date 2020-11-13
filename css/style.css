@@ -1,5 +1,4 @@
 
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,12 +11,9 @@ body{
     color: #ffffff;
     font-family:'Poppins', sans-serif;
     /* width:100vw;
-    height: 100vh; */
-    
+    height: 100vh; */  
 }
-p{
-    font-size: 20px;
-}
+
 .inner-body{
     background-color:  #202c48;
     padding: 1rem;
@@ -27,26 +23,35 @@ p{
 }
 .logo-text{
     font-family: 'Niconne', cursive;
+    margin-left: 5rem;
     font-size: 3rem;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .navbar ul{
     display: flex;
     flex-direction: row;
     justify-content:flex-end;
+    margin-right: 5rem;
 }
+
 li{
     list-style-type: none;
     padding: 1rem;
     font-size: 15px;
 }
-li a{
+/* li a{
     text-decoration: none;
     color: #ffffff;
     cursor: pointer;
+} */
+.arrow-down{
+    display: none;
 }
 .intro{
     display: flex;
@@ -54,8 +59,8 @@ li a{
     align-items: center;
 }
 .img-border{
-    width:25rem;
-    height: 25rem;
+    width:15rem;
+    height: 15rem;
     border-radius: 50%;
     background-color:#354059;
     display: flex;
@@ -67,13 +72,27 @@ li a{
     text-align: right;
     color:#ffffff;
     line-height: 3rem;
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
 }
+@keyframes neon2 {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 6px #fff, 0 0 10px #fff, 0 0 15px #228DFF, 0 0 20px #228DFF, 0 0 25px #228DFF, 0 0 30px #228DFF, 0 0 50px #228DFF;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 10px #228DFF, 0 0 10px #228DFF, 0 0 10px #228DFF, 0 0 10px #228DFF;
+    }
+  }
+  
 .about-me{
     margin: 0 3rem;
-  padding: 7rem;
-  text-align: center;
+   padding: 7rem;
   color:#ffffff;
   line-height: 2rem;
+}
+.about-me p{
+    margin: 2rem 0;
 }
 .skills{
     display: flex;
@@ -92,7 +111,7 @@ li a{
     text-align: center;
 }
 .cards:hover{
-    transform: scale(1.1);
+    transform: scaleX(1);
 }
 .icon{
     width:4rem;
@@ -106,7 +125,7 @@ li a{
 }
 .projects{
     display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-row-gap: 20px;
   grid-column-gap: 20px;
 margin: 10rem;
@@ -143,6 +162,38 @@ margin: 10rem;
     color: #ffffff;
     margin: 1rem;
 }
+/* general style */
+p{
+    font-size: 20px;
+}
+h2{
+    font-size: 20px;
+}
+img{
+    max-width: 70%;
+}
+/* unvisited link */
+a:link {
+    color:white;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(144, 150, 144);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #ffffff;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
 /* media querries */
 
 
@@ -150,7 +201,7 @@ margin: 10rem;
     .inner-body{
         margin: 1rem;
     }
-    .navbar{
+    li{
         display: none;
     }
 .intro{
@@ -186,8 +237,118 @@ margin: 10rem;
     .about-me{
         margin: 0 3rem;
       padding: 1rem;
-      text-align: center;
+     
       color:#ffffff;
       line-height: 2rem;
     }
+    .cards{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width:414px){
+    .inner-body{
+        margin: .5rem;
+    }
+    li{
+        display: none;
+    }
+    .arrow-down{
+        display: inline;
+        margin: 2rem;
+    }
+    a:link {
+        color:white;
+        cursor: pointer;
+      }
+    .logo-text{
+        margin: 1rem;
+    }
+    .header-text{
+        font-size: 10px;
+        margin:10rem 0;
+        text-align: left;
+    }
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projects{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+    }
+    .img-border{
+       display: none;
+    }
+    .about-me{
+      margin: 0 2rem;
+      padding: 1rem;
+      color:#ffffff;
+      line-height: 2rem;
+    }
+    p{
+        font-size: 15px;
+    }
+    .cards{
+        padding: 1rem;
+        margin: .5rem 1rem;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+    @media screen and (max-width:375px){
+        .inner-body{
+            margin: .5rem;
+            padding: 0rem;
+        }
+        /* li{
+            display: none;
+        }
+        .arrow-down{
+            display: inline;
+            margin: 2rem;
+        }
+        .logo-text{
+            margin: 1rem;
+        } */
+        .header-text{
+            font-size: 10px;
+            margin:10rem 0;
+            text-align: left;
+        }
+        .skills{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .projects{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+        }
+        .img-border{
+           display: none;
+        }
+        /* .about-me{
+          margin: 0 2rem;
+          padding: 1rem;
+          color:#ffffff;
+          line-height: 2rem;
+        }
+        h2{
+            font-size: 20px;
+        }
+        p{
+            font-size: 15px;
+        } */
+        /* .cards{
+            padding: 1rem;
+            margin: .5rem 1rem;
+        } */
+       
 }
