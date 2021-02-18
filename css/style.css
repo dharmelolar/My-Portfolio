@@ -29,7 +29,29 @@ body{
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;
     animation: neon2 1.5s ease-in-out infinite alternate;
 }
-.navbar{
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav .mainMenu{
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 1rem;
+    
+}
+nav .openMenu{
+    margin: 2rem;
+    display: none;
+}
+nav .closeMenu{
+    display: none;
+}
+/* .navbar{
     display: flex;
     justify-content: space-between;
 }
@@ -38,7 +60,7 @@ body{
     flex-direction: row;
     justify-content:flex-end;
     margin-right: 5rem;
-}
+} */
 
 li{
     list-style-type: none;
@@ -201,9 +223,6 @@ a:link {
     .inner-body{
         margin: 1rem;
     }
-    li{
-        display: none;
-    }
 .intro{
     display: flex;
     flex-direction: column;
@@ -250,13 +269,7 @@ a:link {
     .inner-body{
         margin: .5rem;
     }
-    li{
-        display: none;
-    }
-    .arrow-down{
-        display: inline;
-        margin: 2rem;
-    }
+    
     a:link {
         color:white;
         cursor: pointer;
@@ -298,6 +311,31 @@ a:link {
     }
     h2{
         font-size: 20px;
+    }
+
+    nav .mainMenu {
+        height: 100vh;
+        position: absolute;
+        top: 0rem;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #202c48;
+        transition: top 1s ease;
+        display: none;
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    nav .openMenu {
+        display: block;
     }
 }
     @media screen and (max-width:375px){
